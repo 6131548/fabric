@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <script src="jquery-1.9.1.js"></script>
+ <script type="text/javascript" src="fabric.js"></script>
+  
+    <title>定位</title>
+</head>
+<body>
+   <canvas id="canvas1" width="500" height="200"></cacnvas>
+    <canvas id="canvas2" width="500" height="200"></cacnvas>
+     <canvas id="canvas3" width="500" height="200"></cacnvas>
+</body>
+  <script>
+    canvas1 = new fabric.Canvas('canvas1');
+   
+  
+    var img = new fabric.Image(imgobject,{
+						left:100,
+						top:100
+					});
+      canvas1.add(img);
+      
+      canvas2 = new fabric.Canvas('canvas2'); 
+      src = 1.png;
+      fabric.Image.fromURL(src, function(img) {
+        canvas2.add(img);
+        img.set({
+            borderColor: 'red',
+            cornerColor: 'green',
+            cornerSize: 10,
+            transparentCorners: false
+           });	
+
+      })
+      
+       var canvas3 = new fabric.Canvas('canvas3');
+       var  text ='添加文字';
+       var addtext = new fabric.Text(text,{
+						left:100,
+						top:100,
+						
+					})
+        canvas3.add(addtext);
+ </script>          
+</html>  
+
